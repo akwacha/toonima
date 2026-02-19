@@ -1,4 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;400;900&display=swap');
 @import "tailwindcss";
+
+:root {
+  --font-default: 'Gothic A1', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html, body {
+  font-family: var(--font-default);
+  font-weight: 400;
+}
 
 :root {
   --background: #ffffff;
