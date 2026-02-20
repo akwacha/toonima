@@ -1,16 +1,13 @@
-
-import Navbar from "../components/navbar";
-import CreatorDashboard from "../components/creatordashboard";
+import LandingPage from "./home/page";
 
 
 
-const page = () => {
+const App = () => {
   return (
     <main className="overflow-x-hidden antialiased text-neutral-800">
-      <Navbar/>
-      <CreatorDashboard/>
+      <LandingPage/>
     </main>
   );
 }
 
-export default page;
+export default App;

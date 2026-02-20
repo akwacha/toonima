@@ -8,7 +8,7 @@ import Footer from "@/src/components/footer";
 
 
 
-const page = () => {
+const LangingPage = () => {
   return (
     <main className="overflow-x-hidden antialiased text-neutral-800">
       <Navbar/>
@@ -21,4 +21,4 @@ const page = () => {
   );
 }
 
-export default page;
+export default LangingPage;

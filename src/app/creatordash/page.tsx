@@ -3,7 +3,7 @@ import Navbar from "@/src/components/navbar";
 import CreatorDashboard from "@/src/components/creatordashboard";
 
 
-const App = () => {
+const page = () => {
   return (
     <main className="overflow-x-hidden antialiased text-neutral-800">
       <Navbar/>
@@ -12,4 +12,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default page;
