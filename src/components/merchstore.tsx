@@ -1,5 +1,5 @@
 'use client';
-import { useState } from "react";
+import { useState, useEffect } from "react"; // Added useEffect
 import { 
   RiShoppingBag3Line, RiFilter3Line, RiArrowRightUpLine, 
   RiStarFill, RiFireLine 
@@ -16,6 +16,18 @@ const products = [
 
 const MerchStore = () => {
   const [filter, setFilter] = useState("All");
+  
+  // --- 🏎️ THE HYDRATION FIX ---
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // Return a shell or null until mounted to prevent mismatch
+  if (!isMounted) {
+    return <div className="bg-[#edf7f6] min-h-screen" />; 
+  }
 
   return (
     <div className="bg-[#edf7f6] min-h-screen text-[#102321] pt-32 pb-20">
