@@ -1,4 +1,4 @@
-import { SERVICES_CONTENT } from "../constants"
+import { SERVICES_CONTENT } from "../constants";
 
 const ARTISTS = [
   { name: "Elena Rossi", specialty: "Muralist", description: "Elena blends contemporary textures with classic renovation aesthetics.", image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=800", badge: "Spotlight" },
@@ -13,73 +13,87 @@ const ARTISTS = [
 
 const Services = () => {
   return (
-    <section className="max-w-7xl mx-auto border-b-2" id="services">
-      <div className="my-20 px-4">
+    <section className="bg-[#edf7f6] text-[#102321]" id="services">
+      <div className="max-w-7xl mx-auto py-24 px-4">
         
-        {/* --- Artists Spotlight Grid (8 Cards) --- */}
+        {/* --- 🎨 ARTISTS SPOTLIGHT --- */}
         <div className="text-center mb-16">
-          <h4 className="text-amber-600 font-semibold tracking-widest uppercase text-sm mb-2">
+          <h4 className="text-[#F56476] font-black tracking-[0.2em] uppercase text-[10px] mb-3">
             The Creative Collective
           </h4>
-          <h2 className="text-3xl lg:text-4xl font-light italic tracking-tight">Artists & Visionaries</h2>
+          <h2 className="text-4xl lg:text-5xl font-black uppercase tracking-tighter italic italic">
+            Artists & Visionaries
+          </h2>
         </div>
 
-        {/* Mobile: grid-cols-2 (4 rows)
-            Web: grid-cols-4 (2 rows) 
-        */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 mb-32">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-32">
           {ARTISTS.map((artist, index) => (
-            <div key={index} className="p-4 lg:p-6 bg-stone-50 rounded-2xl border border-stone-200 shadow-sm flex flex-col items-center text-center group transition-all duration-300 hover:bg-white hover:shadow-md">
+            <div 
+              key={index} 
+              className="group relative bg-white border border-stone-200 p-6 rounded-[2rem] flex flex-col items-center text-center transition-all duration-500 hover:shadow-2xl hover:shadow-[#102321]/5 hover:-translate-y-2"
+            >
               <div className="relative mb-6">
+                <div className="absolute inset-0 bg-[#F56476] rounded-full scale-0 group-hover:scale-105 transition-transform duration-500 -z-10 opacity-20" />
                 <img
                   src={artist.image}
                   alt={artist.name}
-                  className="w-28 h-28 lg:w-36 lg:h-36 object-cover rounded-full border-4 border-white shadow-md transition-transform duration-500 group-hover:scale-105"
+                  className="w-24 h-24 lg:w-32 lg:h-32 object-cover rounded-full border-4 border-[#edf7f6] shadow-xl grayscale-[50%] group-hover:grayscale-0 transition-all duration-500"
                 />
-                <div className={`absolute -top-1 -right-1 px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-tighter shadow-sm text-white ${artist.badge === 'Upcomer' ? 'bg-blue-600' : 'bg-amber-500'}`}>
+                <div className={`absolute -top-1 -right-2 px-3 py-1 rounded-full text-[8px] font-black uppercase tracking-widest shadow-md text-white ${artist.badge === 'Upcomer' ? 'bg-[#102321]' : 'bg-[#F56476]'}`}>
                   {artist.badge}
                 </div>
               </div>
               
-              <h3 className="text-lg font-semibold mb-1 text-stone-900">{artist.name}</h3>
-              <p className="text-xs text-amber-600 font-bold uppercase tracking-widest mb-3">
+              <h3 className="text-lg font-black uppercase tracking-tight mb-1">{artist.name}</h3>
+              <p className="text-[10px] text-[#F56476] font-black uppercase tracking-[0.15em] mb-3">
                 {artist.specialty}
               </p>
-              <p className="text-sm text-stone-500 leading-relaxed line-clamp-3">
+              <p className="text-xs text-stone-500 leading-relaxed font-medium">
                 {artist.description}
               </p>
             </div>
           ))}
         </div>
 
-        <hr className="mb-20 border-stone-100" />
+        <hr className="mb-24 border-stone-200" />
 
-        {/* --- Renovation Services --- */}
-        <h2 className="text-xl lg:text-3xl tracking-tight text-center uppercase mb-20 font-light">
-          Our Home Renovation Services
-        </h2>
+        {/* --- 🏗️ RENOVATION SERVICES --- */}
+        <div className="text-center mb-20">
+          <h2 className="text-2xl lg:text-4xl font-black uppercase tracking-tighter italic">
+            Renovation Services
+          </h2>
+          <div className="w-20 h-1.5 bg-[#F56476] mx-auto mt-4 rounded-full" />
+        </div>
 
-        {SERVICES_CONTENT.map((service, index) => (
-          <div key={index} className="mb-20 flex flex-col lg:flex-row items-center">
-            <div className={`lg:w-1/2 mb-8 lg:mb-0 ${index % 2 === 0 ? "" : "lg:order-2"}`}>
-              <img
-                src={service.image.src}
-                alt={service.title}
-                className="w-full h-72 lg:h-[450px] object-cover rounded-lg shadow-md"
-              />
+        <div className="space-y-32">
+          {SERVICES_CONTENT.map((service, index) => (
+            <div key={index} className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
+              <div className={`lg:w-1/2 group relative ${index % 2 === 0 ? "" : "lg:order-2"}`}>
+                <div className="absolute -inset-4 bg-[#F56476]/5 rounded-[2.5rem] -rotate-2 group-hover:rotate-0 transition-transform duration-500" />
+                <img
+                  src={service.image.src}
+                  alt={service.title}
+                  className="relative w-full h-80 lg:h-[500px] object-cover rounded-[2rem] shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
+
+              <div className={`lg:w-1/2 space-y-6 ${index % 2 === 0 ? "lg:pl-8" : "lg:pr-8"}`}>
+                <h3 className="text-3xl lg:text-5xl font-black uppercase tracking-tighter leading-none">
+                  {service.title}
+                </h3>
+                <p className="text-lg lg:text-xl text-stone-600 leading-relaxed font-medium">
+                  {service.description}
+                </p>
+                <button className="px-8 py-4 bg-[#102321] text-white text-xs font-black uppercase tracking-[0.2em] rounded-xl hover:bg-[#F56476] transition-all shadow-lg active:scale-95">
+                  Explore Project
+                </button>
+              </div>
             </div>
-
-            <div className={`lg:w-1/2 flex flex-col justify-center ${index % 2 === 0 ? "lg:pl-16" : "lg:pr-16"}`}>
-              <h3 className="text-2xl lg:text-3xl font-medium mb-4">{service.title}</h3>
-              <p className="text-lg lg:text-xl text-stone-700 leading-relaxed lg:leading-9">
-                {service.description}
-              </p>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;

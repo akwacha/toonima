@@ -12,7 +12,7 @@ const SettingsScreen = () => {
   const [activeModal, setActiveModal] = useState(null); // 'language', '2fa', 'delete'
   const [selectedLang, setSelectedLang] = useState('English');
   const [settings, setSettings] = useState({
-    darkMode: true,
+    darkMode: false,
     notifications: true,
     dataSaver: false,
     matureContent: false,
@@ -25,22 +25,22 @@ const SettingsScreen = () => {
   };
 
   return (
-    <div className="bg-[#0a0a0a] min-h-screen text-white pt-24 pb-12 relative">
+    <div className="bg-[#edf7f6] min-h-screen text-[#102321] pt-24 pb-12 relative font-sans">
       <div className="max-w-2xl mx-auto px-4">
         
         {/* --- ⚙️ HEADER --- */}
         <div className="mb-10">
-          <h1 className="text-3xl font-black uppercase tracking-tighter">Settings</h1>
-          <p className="text-stone-500 text-sm mt-1">Configure your Toonima experience</p>
+          <h1 className="text-3xl font-black uppercase tracking-tighter italic">Settings</h1>
+          <p className="text-stone-500 text-sm mt-1 font-medium">Configure your Toonima experience</p>
         </div>
 
         {/* --- 🌗 APPEARANCE --- */}
         <section className="mb-8">
-          <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#00D564] mb-4">Appearance</h2>
-          <div className="bg-stone-900/30 border border-white/5 rounded-2xl overflow-hidden">
-            <div className="flex items-center justify-between px-6 py-5 hover:bg-white/5 transition-colors cursor-pointer" onClick={() => toggleSetting('darkMode')}>
+          <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#F56476] mb-4">Appearance</h2>
+          <div className="bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-sm">
+            <div className="flex items-center justify-between px-6 py-5 hover:bg-[#edf7f6]/50 transition-colors cursor-pointer" onClick={() => toggleSetting('darkMode')}>
               <div className="flex items-center gap-4">
-                <div className="p-2.5 bg-stone-900 rounded-xl text-stone-300">
+                <div className="p-2.5 bg-[#edf7f6] rounded-xl text-[#102321]">
                   {settings.darkMode ? <RiMoonClearLine size={20} /> : <RiSunLine size={20} />}
                 </div>
                 <div>
@@ -59,11 +59,11 @@ const SettingsScreen = () => {
 
         {/* --- 🔔 NOTIFICATIONS --- */}
         <section className="mb-8">
-          <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#00D564] mb-4">Notifications</h2>
-          <div className="bg-stone-900/30 border border-white/5 rounded-2xl overflow-hidden">
-            <div className="flex items-center justify-between px-6 py-5 hover:bg-white/5 transition-colors cursor-pointer" onClick={() => toggleSetting('notifications')}>
+          <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#F56476] mb-4">Notifications</h2>
+          <div className="bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-sm">
+            <div className="flex items-center justify-between px-6 py-5 hover:bg-[#edf7f6]/50 transition-colors cursor-pointer" onClick={() => toggleSetting('notifications')}>
               <div className="flex items-center gap-4">
-                <div className="p-2.5 bg-stone-900 rounded-xl text-stone-300">
+                <div className="p-2.5 bg-[#edf7f6] rounded-xl text-[#102321]">
                   <RiNotification4Line size={20} />
                 </div>
                 <div>
@@ -78,11 +78,11 @@ const SettingsScreen = () => {
 
         {/* --- 🔒 PRIVACY & SECURITY --- */}
         <section className="mb-8">
-          <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#00D564] mb-4">Privacy & Security</h2>
-          <div className="bg-stone-900/30 border border-white/5 rounded-2xl overflow-hidden">
-            <div className="flex items-center justify-between px-6 py-5 border-b border-white/5 hover:bg-white/5 transition-colors cursor-pointer" onClick={() => toggleSetting('incognito')}>
+          <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#F56476] mb-4">Privacy & Security</h2>
+          <div className="bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-sm">
+            <div className="flex items-center justify-between px-6 py-5 border-b border-stone-100 hover:bg-[#edf7f6]/50 transition-colors cursor-pointer" onClick={() => toggleSetting('incognito')}>
               <div className="flex items-center gap-4">
-                <div className="p-2.5 bg-stone-900 rounded-xl text-stone-300">
+                <div className="p-2.5 bg-[#edf7f6] rounded-xl text-[#102321]">
                   <RiShieldUserLine size={20} />
                 </div>
                 <div>
@@ -101,9 +101,9 @@ const SettingsScreen = () => {
               />
             </div>
 
-            <div className="flex items-center justify-between px-6 py-5 hover:bg-white/5 transition-colors cursor-pointer" onClick={() => toggleSetting('matureContent')}>
+            <div className="flex items-center justify-between px-6 py-5 hover:bg-[#edf7f6]/50 transition-colors cursor-pointer" onClick={() => toggleSetting('matureContent')}>
               <div className="flex items-center gap-4">
-                <div className="p-2.5 bg-stone-900 rounded-xl text-stone-300">
+                <div className="p-2.5 bg-[#edf7f6] rounded-xl text-[#102321]">
                   <RiEyeOffLine size={20} />
                 </div>
                 <div>
@@ -118,11 +118,11 @@ const SettingsScreen = () => {
 
         {/* --- 💾 DATA & STORAGE --- */}
         <section className="mb-12">
-          <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#00D564] mb-4">Data & Storage</h2>
-          <div className="bg-stone-900/30 border border-white/5 rounded-2xl overflow-hidden">
-            <div className="flex items-center justify-between px-6 py-5 border-b border-white/5 hover:bg-white/5 transition-colors cursor-pointer" onClick={() => toggleSetting('dataSaver')}>
+          <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#F56476] mb-4">Data & Storage</h2>
+          <div className="bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-sm">
+            <div className="flex items-center justify-between px-6 py-5 border-b border-stone-100 hover:bg-[#edf7f6]/50 transition-colors cursor-pointer" onClick={() => toggleSetting('dataSaver')}>
               <div className="flex items-center gap-4">
-                <div className="p-2.5 bg-stone-900 rounded-xl text-stone-300">
+                <div className="p-2.5 bg-[#edf7f6] rounded-xl text-[#102321]">
                   <RiDatabase2Line size={20} />
                 </div>
                 <div>
@@ -138,28 +138,27 @@ const SettingsScreen = () => {
 
         <button 
           onClick={() => setActiveModal('delete')}
-          className="w-full py-4 text-stone-500 hover:text-red-500 text-[10px] font-black uppercase tracking-widest transition-colors"
+          className="w-full py-4 text-stone-400 hover:text-[#F56476] text-[10px] font-black uppercase tracking-widest transition-colors"
         >
           Delete Toonima Account
         </button>
       </div>
 
-      {/* --- 🛠️ MODALS (The Restored Tech) --- */}
+      {/* --- 🛠️ MODALS --- */}
       {activeModal && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={() => setActiveModal(null)} />
-          <div className="relative bg-stone-950 border border-white/10 w-full max-w-sm rounded-3xl p-8 shadow-2xl">
+          <div className="absolute inset-0 bg-[#102321]/40 backdrop-blur-sm" onClick={() => setActiveModal(null)} />
+          <div className="relative bg-white border border-stone-100 w-full max-w-sm rounded-3xl p-8 shadow-2xl animate-in fade-in zoom-in duration-200">
             
-            {/* Language Modal */}
             {activeModal === 'language' && (
               <div className="space-y-6">
-                <h3 className="text-xl font-black uppercase tracking-tighter">Select Language</h3>
+                <h3 className="text-xl font-black uppercase tracking-tighter italic">Select Language</h3>
                 <div className="space-y-2">
                   {['English', 'Chichewa'].map((lang) => (
                     <button 
                       key={lang}
                       onClick={() => { setSelectedLang(lang); setActiveModal(null); }}
-                      className={`w-full p-4 rounded-xl text-left font-bold transition-all ${selectedLang === lang ? 'bg-[#00D564] text-black' : 'bg-white/5 text-white hover:bg-white/10'}`}
+                      className={`w-full p-4 rounded-xl text-left font-bold transition-all ${selectedLang === lang ? 'bg-[#F56476] text-white shadow-lg shadow-red-200' : 'bg-[#edf7f6]/50 text-[#102321] hover:bg-[#edf7f6]'}`}
                     >
                       {lang}
                     </button>
@@ -168,36 +167,34 @@ const SettingsScreen = () => {
               </div>
             )}
 
-            {/* 2FA Modal */}
             {activeModal === '2fa' && (
               <div className="text-center space-y-6">
-                <div className="w-16 h-16 bg-[#00D564]/10 rounded-full flex items-center justify-center mx-auto text-[#00D564]">
+                <div className="w-16 h-16 bg-[#F56476]/10 rounded-full flex items-center justify-center mx-auto text-[#F56476]">
                   <RiShieldCheckLine size={32} />
                 </div>
-                <h3 className="text-xl font-black uppercase tracking-tighter">2FA Security</h3>
-                <p className="text-stone-400 text-xs">Verify your identity to secure your account.</p>
+                <h3 className="text-xl font-black uppercase tracking-tighter italic">2FA Security</h3>
+                <p className="text-stone-500 text-xs font-medium">Verify your identity to secure your account.</p>
                 <button 
                   onClick={() => { toggleSetting('twoFactor'); setActiveModal(null); }}
-                  className="w-full py-4 bg-[#00D564] text-black font-black uppercase text-xs rounded-xl tracking-widest"
+                  className="w-full py-4 bg-[#102321] text-white font-black uppercase text-xs rounded-xl tracking-widest hover:bg-[#F56476] transition-all"
                 >
                   {settings.twoFactor ? "Disable 2FA" : "Enable 2FA"}
                 </button>
               </div>
             )}
 
-            {/* Delete Modal */}
             {activeModal === 'delete' && (
               <div className="text-center space-y-6">
-                <div className="w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center mx-auto text-red-500">
+                <div className="w-16 h-16 bg-red-50/50 rounded-full flex items-center justify-center mx-auto text-red-500">
                   <RiDeleteBinLine size={32} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-black uppercase tracking-tighter">Delete Account?</h3>
-                  <p className="text-stone-400 text-sm mt-2 font-medium italic">Chichewa: Izi sizingasinthidwenso. Mudzataya chilichonse.</p>
+                  <h3 className="text-xl font-black uppercase tracking-tighter italic">Delete Account?</h3>
+                  <p className="text-stone-400 text-sm mt-2 font-medium italic leading-relaxed">Izi sizingasinthidwenso. Mudzataya chilichonse.</p>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <button className="w-full py-4 bg-red-600 text-white font-black uppercase text-xs rounded-xl tracking-widest hover:bg-red-700 transition-colors">Confirm Deletion</button>
-                  <button onClick={() => setActiveModal(null)} className="w-full py-4 text-stone-500 font-bold text-xs uppercase tracking-widest">Cancel / Ndasiya</button>
+                  <button className="w-full py-4 bg-[#F56476] text-white font-black uppercase text-xs rounded-xl tracking-widest hover:brightness-110 shadow-lg shadow-red-100 transition-all">Confirm Deletion</button>
+                  <button onClick={() => setActiveModal(null)} className="w-full py-4 text-stone-400 font-bold text-xs uppercase tracking-widest hover:text-[#102321] transition-colors">Cancel / Ndasiya</button>
                 </div>
               </div>
             )}
@@ -208,22 +205,22 @@ const SettingsScreen = () => {
   );
 };
 
-// --- INTERNAL HELPERS (Must be in the same file to avoid the Error) ---
+// --- INTERNAL HELPERS ---
 
 const Toggle = ({ active }) => (
-  <div className={`w-11 h-6 rounded-full transition-all duration-300 relative ${active ? 'bg-[#00D564]' : 'bg-stone-700'}`}>
-    <div className={`absolute top-1 w-4 h-4 bg-white rounded-full transition-all duration-300 ${active ? 'left-6' : 'left-1'}`} />
+  <div className={`w-11 h-6 rounded-full transition-all duration-300 relative ${active ? 'bg-[#F56476]' : 'bg-stone-200'}`}>
+    <div className={`absolute top-1 w-4 h-4 bg-white rounded-full transition-all duration-300 shadow-sm ${active ? 'left-6' : 'left-1'}`} />
   </div>
 );
 
 const SettingLink = ({ icon, title, value }) => (
-  <div className="flex items-center justify-between px-6 py-5 border-b border-white/5 last:border-none hover:bg-white/5 transition-colors cursor-pointer">
+  <div className="flex items-center justify-between px-6 py-5 border-b border-stone-100 last:border-none hover:bg-[#edf7f6]/50 transition-colors cursor-pointer">
     <div className="flex items-center gap-4">
-      <div className="p-2.5 bg-stone-900 rounded-xl text-stone-300">{icon}</div>
+      <div className="p-2.5 bg-[#edf7f6] rounded-xl text-[#102321]">{icon}</div>
       <p className="font-bold text-sm">{title}</p>
     </div>
-    <div className="flex items-center gap-2 text-stone-500">
-      <span className="text-xs">{value}</span>
+    <div className="flex items-center gap-2 text-stone-400">
+      <span className="text-xs font-bold uppercase tracking-wider">{value}</span>
       <RiArrowRightSLine size={20} />
     </div>
   </div>

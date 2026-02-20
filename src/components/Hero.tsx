@@ -15,7 +15,6 @@ const Hero = () => {
   const scrollRef = useRef(null)
   const [paused, setPaused] = useState(false)
 
-  // Double the data for the infinite loop trick
   const infiniteItems = [...featured, ...featured]
 
   useEffect(() => {
@@ -23,13 +22,11 @@ const Hero = () => {
     if (!el) return
 
     let animationFrameId
-    const scrollSpeed = 1 // Adjust speed here (higher = faster)
+    const scrollSpeed = 1 
 
     const scroll = () => {
       if (!paused) {
         el.scrollLeft += scrollSpeed
-
-        // Teleport back to start when reaching the midpoint
         if (el.scrollLeft >= el.scrollWidth / 2) {
           el.scrollLeft = 0
         }
@@ -38,31 +35,36 @@ const Hero = () => {
     }
 
     animationFrameId = requestAnimationFrame(scroll)
-
     return () => cancelAnimationFrame(animationFrameId)
   }, [paused])
 
   return (
-    <section className="max-w-7xl mx-auto border-b-2 overflow-hidden">
-      <div className="flex flex-col items-center my-20 w-full">
-        <h1 className="text-6xl lg:text-[10rem] p-2 uppercase font-bold">
+    <section className="bg-[#edf7f6] border-b border-stone-200 overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col items-center my-20 w-full text-[#102321]">
+        
+        {/* --- TITLE --- */}
+        <h1 className="text-6xl lg:text-[10rem] p-2 uppercase font-black tracking-tighter italic leading-none">
           {HERO_CONTENT.title}
         </h1>
 
-        <p className="lg:mt-6 text-sm mb-4 font-medium tracking-tighter">
+        {/* --- SUBTITLE --- */}
+        <p className="lg:mt-6 text-sm mb-4 font-black uppercase tracking-[0.3em] text-[#F56476]">
           {HERO_CONTENT.subtitle}
         </p>
 
-        <img
-          src={HERO_CONTENT.image.src}
-          className="w-full h-[65vh] object-cover rounded-2xl p-2"
-          alt="Hero"
-        />
+        {/* --- MAIN HERO IMAGE --- */}
+        <div className="w-full px-2">
+           <img
+            src={HERO_CONTENT.image.src}
+            className="w-full h-[65vh] object-cover rounded-[2.5rem] shadow-2xl border border-stone-200"
+            alt="Hero"
+          />
+        </div>
 
         {/* ⭐ INFINITE FEATURED CAROUSEL */}
         <div className="w-full mt-14 px-2">
-          <h2 className="text-2xl font-bold mb-4 uppercase tracking-wide">
-            Featured
+          <h2 className="text-2xl font-black uppercase tracking-tighter italic mb-6">
+            Featured Content
           </h2>
 
           <div
@@ -84,14 +86,16 @@ const Hero = () => {
             {infiniteItems.map((item, index) => (
               <div
                 key={`${item.id}-${index}`}
-                className="min-w-[240px] h-[320px] bg-white rounded-2xl shadow-lg overflow-hidden flex-shrink-0"
+                className="min-w-[240px] h-[320px] bg-white rounded-2xl shadow-xl shadow-[#102321]/5 border border-stone-100 overflow-hidden flex-shrink-0 group cursor-pointer transition-all duration-300 hover:border-[#F56476]"
               >
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full h-[75%] object-cover"
+                  className="w-full h-[75%] object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-500"
                 />
-                <div className="p-3 font-semibold">{item.title}</div>
+                <div className="p-4 font-black uppercase tracking-tight text-sm text-[#102321] group-hover:text-[#F56476] transition-colors">
+                  {item.title}
+                </div>
               </div>
             ))}
           </div>
