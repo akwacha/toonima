@@ -2,11 +2,12 @@
 import { useState } from "react";
 import { RiMailLine, RiLockPasswordLine, RiUserLine, RiGoogleFill } from "react-icons/ri";
 
-const AuthForm = () => {
+
+const LoginForm = () => {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
-    <section className="min-h-[80vh] flex items-center justify-center px-4 py-12 bg-white">
+    <section className="min-h-[100vh] flex items-center justify-center px-4 py-12 bg-white">
       <div className="w-full max-w-md bg-white border border-stone-100 p-8 rounded-2xl shadow-xl">
         
         {/* --- Brand Header --- */}
@@ -95,4 +96,4 @@ const AuthForm = () => {
   );
 };
 
-export default AuthForm;
+export default LoginForm;

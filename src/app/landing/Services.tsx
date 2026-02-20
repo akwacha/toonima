@@ -1,4 +1,4 @@
-import { SERVICES_CONTENT } from "../constants"
+import { SERVICES_CONTENT } from "../../constants"
 
 const ARTISTS = [
   { name: "Elena Rossi", specialty: "Muralist", description: "Elena blends contemporary textures with classic renovation aesthetics.", image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=800", badge: "Spotlight" },
