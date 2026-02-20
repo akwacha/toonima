@@ -1,5 +1,5 @@
 'use client';
-import { useState } from "react";
+import { useState, useEffect } from "react"; // Kept all imports, added useEffect
 import { 
   RiHeartFill, RiHistoryLine, RiDeleteBin6Line, 
   RiPlayMiniFill, RiMore2Fill 
@@ -8,10 +8,19 @@ import { PORTFOLIO_PROJECTS } from "../constants";
 
 const LibraryScreen = () => {
   const [activeTab, setActiveTab] = useState("favorites");
+  const [mounted, setMounted] = useState(false); // Added for hydration fix
+
+  // Fix: Ensures the client-side render matches the server-side initial pass
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Mock data splitting for demonstration
   const favorites = PORTFOLIO_PROJECTS.slice(0, 5);
   const history = PORTFOLIO_PROJECTS.slice(3, 8);
+
+  // If not mounted, return the container shell to prevent mismatch
+  if (!mounted) return <div className="bg-[#edf7f6] min-h-screen pt-20" />;
 
   return (
     <div className="bg-[#edf7f6] min-h-screen text-[#102321] pt-20">

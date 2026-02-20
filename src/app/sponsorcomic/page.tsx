@@ -1,6 +1,7 @@
 
+import Footer from "@/src/components/footer";
 import Navbar from "@/src/components/navbar";
-import CreatorBrowser from "@/src/components/creatorbrowser"; 
+import SponsorPage from "@/src/components/sponsorcomic";
 
 
 
@@ -8,7 +9,8 @@ const page = () => {
   return (
     <main className="overflow-x-hidden antialiased text-neutral-800">
       <Navbar/>
-      <CreatorBrowser/>
+      <SponsorPage/>
+      <Footer/>
     </main>
   );
 }

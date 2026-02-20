@@ -1,13 +1,17 @@
 
+import BuyCoffee from "@/src/components/buyuscoffee";
+import Footer from "@/src/components/footer";
 import Navbar from "@/src/components/navbar";
-import CreatorProfile from "../../components/creatorprofile";
+
+
 
 
 const page = () => {
   return (
     <main className="overflow-x-hidden antialiased text-neutral-800">
       <Navbar/>
-<CreatorProfile/>
+      <BuyCoffee/>
+      <Footer/>
     </main>
   );
 }

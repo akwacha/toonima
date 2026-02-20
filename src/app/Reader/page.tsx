@@ -1,5 +1,5 @@
 
-import ComicReader from "./Reader";
+import ComicReader from "../../components/reader";
 
 const page = () => {
   return (
