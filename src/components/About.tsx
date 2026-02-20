@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { PORTFOLIO_PROJECTS } from "../../constants";
+import { PORTFOLIO_PROJECTS } from "../constants";
 
 const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Completed"];
 
@@ -12,13 +12,13 @@ const Portfolio = () => {
   const displayProjects = PORTFOLIO_PROJECTS.slice(0, 18);
 
   return (
-    <section className="max-w-7xl mx-auto border-b-2" id="portfolio">
+    <section className="max-w-7xl mx-auto bg-color border-b-2 border-charcoal-dark/20" id="portfolio">
       <div className="my-20 px-4">
         
-        {/* --- Top Navigation (Based on Image 1) --- */}
+        {/* --- Top Navigation --- */}
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl font-bold text-stone-900">Daily</h2>
-          <button className="text-xs text-stone-400 hover:text-stone-600">View all</button>
+          <h2 className="text-2xl font-black text-foreground uppercase tracking-tighter italic">Daily</h2>
+          <button className="text-xs font-bold text-bublegum hover:text-azure transition-colors">View all</button>
         </div>
 
         <div className="flex flex-wrap gap-2 mb-12">
@@ -26,10 +26,10 @@ const Portfolio = () => {
             <button
               key={day}
               onClick={() => setSelectedDay(day)}
-              className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all ${
+              className={`px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest transition-all ${
                 selectedDay === day 
-                  ? "bg-black text-white shadow-lg" 
-                  : "bg-stone-100 text-stone-400 hover:bg-stone-200"
+                  ? "bg-azure text-charcoal-black shadow-lg" 
+                  : "bg-charcoal-dark/10 text-charcoal hover:bg-charcoal-dark/20"
               }`}
             >
               {day}
@@ -42,32 +42,32 @@ const Portfolio = () => {
           {displayProjects.map((project, index) => (
             <div key={project.id} className="group cursor-pointer relative">
               
-              {/* Image Container with Webtoon Aspect Ratio */}
-              <div className="relative aspect-[3/4] overflow-hidden rounded-md mb-3 transition-transform duration-300 group-hover:-translate-y-2">
+              {/* Image Container */}
+              <div className="relative aspect-[3/4] overflow-hidden rounded-md mb-3 transition-transform duration-300 group-hover:-translate-y-2 border border-charcoal-dark/10">
                 <img
                   src={project.image.src}
                   alt={project.name}
                   className="h-full w-full object-cover"
                 />
                 
-                {/* Optional: Ranking Numbers for the first 5 (Based on Image 2) */}
+                {/* Ranking Numbers - Styled with Princeton Orange on hover */}
                 {index < 5 && (
-                  <div className="absolute -bottom-4 -left-1 text-7xl font-black text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] italic z-10 opacity-90">
+                  <div className="absolute -bottom-4 -left-1 text-7xl font-black text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] italic z-10 opacity-90 group-hover:text-princeton transition-colors duration-300">
                     {index + 1}
                   </div>
                 )}
               </div>
 
-              {/* Metadata (Image 1 Style) */}
+              {/* Metadata */}
               <div className="space-y-0.5">
-                <p className="text-[10px] text-stone-400 font-medium">
+                <p className="text-[10px] text-charcoal font-black uppercase tracking-widest">
                   {project.category || "General"}
                 </p>
-                <h3 className="text-[13px] font-bold text-stone-900 leading-snug line-clamp-2 group-hover:text-green-600 transition-colors">
+                <h3 className="text-[13px] font-bold text-foreground leading-snug line-clamp-2 group-hover:text-azure transition-colors">
                   {project.name}
                 </h3>
                 <div className="flex items-center gap-1">
-                   <span className="text-[11px] font-bold text-green-500">
+                   <span className="text-[11px] font-black text-azure uppercase">
                      {project.views || "1.5M"}
                    </span>
                 </div>

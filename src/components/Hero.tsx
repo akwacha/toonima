@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react"
-import { HERO_CONTENT } from "../../constants"
+import { HERO_CONTENT } from "../constants"
 
 const featured = [
   { id: 1, title: "Midnight City", img: "https://placehold.co/300x400" },

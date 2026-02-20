@@ -19,168 +19,168 @@ import user6 from "../assets/user6.webp";
 
 export const LINKS = [
   {
-    name: "Services",
-    link: "#services",
+    name: "Originals",
+    link: "#originals",
   },
   {
-    name: "Portfolio",
-    link: "#portfolio",
+    name: "Canvas",
+    link: "#canvas",
   },
   {
-    name: "About",
-    link: "#about",
+    name: "Trending",
+    link: "#trending",
   },
   {
-    name: "Reviews",
-    link: "#reviews",
+    name: "Community",
+    link: "#community",
   },
   {
-    name: "Contact",
-    link: "#contact",
+    name: "Publish",
+    link: "#publish",
   },
 ];
 
 export const HERO_CONTENT = {
-  title: "VastuSpaze",
-  subtitle: "Reimagine Your Space with Expert Renovation Services",
+  title: "Toonima",
+  subtitle: "art that scrolls",
   image: hero,
 };
 
 export const SERVICES_CONTENT = [
   {
-    title: "Kitchen Renovation",
+    title: "Toonima Originals",
     description:
-      "Transform your kitchen into a modern, functional space with our comprehensive renovation services. From custom cabinetry to state-of-the-art appliances, we handle all aspects of kitchen remodeling.",
+      "Dive into our premium vertical comics, exclusive to Toonima. Experience cinematic storytelling crafted by industry leaders, optimized specifically for your seamless mobile scrolling experience.",
     image: kitchenImage,
-    alt: "Kitchen Renovation",
+    alt: "Toonima Originals",
   },
   {
-    title: "Bathroom Renovation",
+    title: "Canvas Creator Hub",
     description:
-      "Create a spa-like retreat in your home with our bathroom renovation services. We offer luxurious fixtures, custom tiling, and innovative designs to elevate your bathroom experience.",
+      "The home of indie storytelling. We provide the stage and the audience for independent artists to self-publish their works, grow a loyal fanbase, and revolutionize the digital comic world.",
     image: bathroomImage,
-    alt: "Bathroom Renovation",
+    alt: "Canvas Creator Hub",
   },
   {
-    title: "Living Room Renovation",
+    title: "Global Community",
     description:
-      "Update your living room with our expert renovation services. We offer custom designs, new flooring options, and stylish lighting solutions to create a warm and inviting space for your family and guests.",
+      "Connect with millions of fellow fans. Engage in real-time discussions, support your favorite indie creators through our tipping system, and discover art that transcends borders and languages.",
     image: livingRoomImage,
-    alt: "Living Room Renovation",
+    alt: "Global Community",
   },
 ];
 
 export const PORTFOLIO_PROJECTS = [
   {
     id: 1,
-    name: "Modern Kitchen Renovation",
+    name: "Apex Predator: Formula Zero",
     description:
-      "A complete overhaul of a traditional kitchen, featuring custom cabinetry, granite countertops, and state-of-the-art appliances.",
+      "A high-stakes racing saga following a ruthless prodigy who dominates the grid through sheer focus and a refusal to lift off the throttle.",
     image: portfolio1,
     link: "#",
   },
   {
     id: 2,
-    name: "Luxurious Bathroom Remodel",
+    name: "The Blue Streak",
     description:
-      "Transformed an outdated bathroom into a spa-like retreat with marble tiling, a glass shower, and modern fixtures.",
+      "An underdog story of a driver who finds a legendary 'ghost' engine, pushing the boundaries of physics on the world's most dangerous street circuits.",
     image: portfolio2,
     link: "#",
   },
   {
     id: 3,
-    name: "Outdoor Living Space",
+    name: "Redline Rebellion",
     description:
-      "Designed a beautiful outdoor living area, complete with a pergola, fire pit, and cozy seating for entertainment.",
+      "In a future where racing is outlawed, a group of rebel engineers builds the ultimate machine to challenge the corporate-controlled speed limit.",
     image: portfolio3,
     link: "#",
   },
   {
     id: 4,
-    name: "Elegant Living Room Update",
+    name: "Pit Wall Strategy",
     description:
-      "Updated a living room with new flooring, stylish lighting, and custom-built shelving units.",
+      "A technical drama focusing on the genius tacticians and engineers who win races from the garage, where every millisecond counts.",
     image: portfolio4,
     link: "#",
   },
   {
     id: 5,
-    name: "Basement Conversion",
+    name: "Monaco Mirage",
     description:
-      "Converted an unused basement into a modern, multi-functional space including a home theater, gym, and guest bedroom.",
+      "A glamorous heist mystery set against the backdrop of the world's most prestigious Grand Prix, where the lines between racing and reality blur.",
     image: portfolio5,
     link: "#",
   },
   {
     id: 6,
-    name: "Home Office Transformation",
+    name: "Full Send: 33 Degrees",
     description:
-      "Created a sleek and functional home office, optimizing space with ergonomic furniture, ample storage, and modern decor.",
+      "A shonen-style action series following the rise of a young driver, capturing the mental grit required to stay at the top of the podium.",
     image: portfolio6,
     link: "#",
   },
 ];
 
 export const REVIEWS = {
-  text: "Hear what our clients have to say about their experiences with VastuSpaze. We take pride in our work and are committed to delivering top-notch home renovation services.",
+  text: "Hear from the creators and readers who make Toonima the fastest-growing digital comic destination. We are committed to fueling the next generation of storytelling.",
   reviews: [
     {
-      name: "Alice Johnson",
-      title: "Homeowner",
+      name: "Marcus Vane",
+      title: "Canvas Creator",
       review:
-        "VastuSpaze transformed our outdated kitchen into a modern masterpiece. The team was professional, attentive to our needs, and delivered beyond our expectations. We couldn't be happier with the results!",
+        "Toonima gave me the platform to share my story with the world. The creator tools are intuitive, and seeing the community engage with my art in real-time is an incredible experience!",
       image: user1,
     },
     {
-      name: "Bob Smith",
-      title: "Homeowner",
+      name: "Sarah Jenkins",
+      title: "Premium Reader",
       review:
-        "Our bathroom renovation was seamless, thanks to VastuSpaze. They took care of everything from design to execution, and the attention to detail was impeccable. Highly recommended!",
+        "The vertical reading experience is so much better than traditional apps. It feels like the art is actually moving as I scroll. I haven't put my phone down since I discovered Neon Circuit!",
       image: user2,
     },
     {
-      name: "Carla Mendes",
-      title: "Homeowner",
+      name: "Kenji Sato",
+      title: "Art Director",
       review:
-        "VastuSpaze helped us create the perfect outdoor living space. Their creativity and craftsmanship turned our backyard into a beautiful oasis. It's now our favorite place to relax and entertain guests.",
+        "Toonima is bridging the gap between indie passion and professional production. Their support for artists and dedication to high-quality vertical storytelling is unparalleled.",
       image: user3,
     },
     {
-      name: "David Lee",
-      title: "Homeowner",
+      name: "Elena Petrov",
+      title: "Casual Reader",
       review:
-        "The living room update exceeded our expectations. VastuSpaze's team was skilled and communicative, ensuring a smooth renovation process. The new design has brought a fresh, modern look to our home.",
+        "I love the diversity of genres! Whether I want an epic fantasy or a quick laugh, there's always something fresh on the home feed. The app is incredibly smooth and easy to use.",
       image: user4,
     },
     {
-      name: "Ella Fernandez",
-      title: "Homeowner",
+      name: "David Aris",
+      title: "Indie Illustrator",
       review:
-        "From start to finish, VastuSpaze was a pleasure to work with. They listened to our vision and brought it to life with expert craftsmanship. Our home office is now a stylish and functional space.",
+        "Publishing on Canvas was the best decision I ever made. The analytics helped me understand my readers, and the monetization options actually allow me to earn from my passion.",
       image: user5,
     },
     {
-      name: "Frank Wilson",
-      title: "Homeowner",
+      name: "Linda Wu",
+      title: "Fan Club Founder",
       review:
-        "VastuSpaze did an amazing job on our basement conversion. They created a cozy, multi-functional space that our family loves. The team was professional and delivered on time and within budget.",
+        "The community features are top-notch. Chatting about the latest episode in the comments section makes reading feel like a shared event. Toonima really understands fan culture.",
       image: user6,
     },
   ],
 };
 
 export const CONTACT_INFO = {
-  text: "Have questions or need more information? Get in touch with us, and we ll be happy to assist you.",
+  text: "Have a story idea or need technical support? Reach out to our team, and we'll help you find your place in the Toonima universe.",
   phone: {
-    label: "Phone",
-    value: "(123) 456-7890",
+    label: "Support",
+    value: "+1 (800) TOONIMA",
   },
   email: {
     label: "Email",
-    value: "info@vastuspaze.com",
+    value: "creators@toonima.com",
   },
   address: {
-    label: "Address",
-    value: "1234 Renovation Ave, Suite 100, Your City, ST 56789",
+    label: "Headquarters",
+    value: "789 Ink Street, Suite 33, Creative District, ST 99101",
   },
 };

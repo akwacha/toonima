@@ -1,6 +1,6 @@
 
 import Navbar from "@/src/components/navbar";
-import LibraryScreen from "./library";
+import LibraryScreen from "../../components/library";
 
 
 const page = () => {
