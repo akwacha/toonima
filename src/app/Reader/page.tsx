@@ -1,7 +1,7 @@
 
 import ComicReader from "./Reader";
 
-const comicReader = () => {
+const page = () => {
   return (
     <main className="overflow-x-hidden antialiased text-neutral-800">
       <ComicReader/>
@@ -9,4 +9,4 @@ const comicReader = () => {
   );
 }
 
-export default comicReader;
+export default page;

@@ -7,7 +7,7 @@ import About from "./About";
 
 
 
-const Landing = () => {
+const page = () => {
   return (
     <main className="overflow-x-hidden antialiased text-neutral-800">
       <Hero/>
@@ -18,4 +18,4 @@ const Landing = () => {
   );
 }
 
-export default Landing;
+export default page;
