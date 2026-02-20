@@ -28,9 +28,11 @@ const CreatorDashboard = () => {
             <p className="text-stone-400 text-sm mt-2 font-bold uppercase tracking-tight">Welcome back, Chief. Performance is looking optimal.</p>
           </div>
           <div className="flex gap-3">
-            <button className="px-6 py-4 bg-[#102321] text-white font-black text-[10px] uppercase tracking-widest rounded-2xl hover:bg-[#F56476] shadow-xl shadow-[#102321]/10 transition-all">
-              New Chapter
-            </button>
+            <a href="/uploadcomic">
+              <button className="px-6 py-4 bg-[#102321] text-white font-black text-[10px] uppercase tracking-widest rounded-2xl hover:bg-[#F56476] shadow-xl shadow-[#102321]/10 transition-all">
+                New Chapter
+              </button>
+            </a>
           </div>
         </div>
 
@@ -86,9 +88,11 @@ const CreatorDashboard = () => {
                 </div>
                 <p className="text-white/70 text-[10px] font-black uppercase tracking-widest">Available for Payout</p>
                 <h2 className="text-4xl font-black mt-1 italic tracking-tighter">$842.50</h2>
-                <button className="w-full mt-6 py-4 bg-[#102321] text-white font-black text-[10px] uppercase tracking-widest rounded-2xl hover:bg-white hover:text-[#102321] transition-all">
-                  Request Payout
-                </button>
+                <a href="/payout">
+                  <button className="w-full mt-6 py-4 bg-[#102321] text-white font-black text-[10px] uppercase tracking-widest rounded-2xl hover:bg-white hover:text-[#102321] transition-all">
+                    Request Payout
+                  </button>
+                </a>
               </div>
               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl" />
             </div>
@@ -130,10 +134,16 @@ const CreatorDashboard = () => {
                     <h4 className="font-black uppercase tracking-tighter text-xl italic leading-none text-[#102321]">Shadow of Malawi</h4>
                     <p className="text-stone-400 text-[10px] uppercase font-black tracking-widest mt-2">Action • 14 Chapters</p>
                     <div className="mt-5 flex gap-2">
-                       <button className="px-5 py-2.5 border border-stone-200 rounded-xl text-[9px] font-black uppercase tracking-widest hover:bg-[#F56476] hover:text-white hover:border-[#F56476] transition-all flex items-center gap-1">
-                         Edit <RiExternalLinkLine />
-                       </button>
-                       <button className="px-5 py-2.5 bg-[#edf7f6] rounded-xl text-[9px] font-black uppercase tracking-widest text-[#102321] hover:bg-[#102321] hover:text-white transition-all">Analytics</button>
+                       <a href="/edit/shadow-of-malawi">
+                        <button className="px-5 py-2.5 border border-stone-200 rounded-xl text-[9px] font-black uppercase tracking-widest hover:bg-[#F56476] hover:text-white hover:border-[#F56476] transition-all flex items-center gap-1">
+                          Edit <RiExternalLinkLine />
+                        </button>
+                       </a>
+                       <a href="/analytics/shadow-of-malawi">
+                        <button className="px-5 py-2.5 bg-[#edf7f6] rounded-xl text-[9px] font-black uppercase tracking-widest text-[#102321] hover:bg-[#102321] hover:text-white transition-all">
+                          Analytics
+                        </button>
+                       </a>
                     </div>
                  </div>
               </div>

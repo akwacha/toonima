@@ -1,13 +1,16 @@
 
 import Navbar from "@/src/components/navbar";
-import ComicUploadForm from "@/src/components/upload";
+import MerchStore from "@/src/components/merchstore";
+import Footer from "@/src/components/footer";
+
 
 
 const page = () => {
   return (
     <main className="overflow-x-hidden antialiased text-neutral-800">
       <Navbar/>
-      <ComicUploadForm/>
+      <MerchStore/>
+      <Footer/>
     </main>
   );
 }
