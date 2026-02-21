@@ -11,7 +11,7 @@ const ARTISTS = [
   { name: "Kaito Sato", specialty: "Digital Joiner", description: "Our latest addition using 3D printing to create modular wooden joints.", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800", badge: "Upcomer" },
 ];
 
-const Services = () => {
+const Spotlight = () => {
   return (
     <section className="bg-[#edf7f6] text-[#102321]" id="services">
       <div className="max-w-7xl mx-auto py-24 px-4">
@@ -96,4 +96,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Spotlight;

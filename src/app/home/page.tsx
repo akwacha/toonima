@@ -1,10 +1,10 @@
 
 import Navbar from "@/components/navbar";
 import Hero from "@/components/home/Hero";
-import Services from "@/components/home/Services";
-import Portfolio from "@/components/home/Portfolio";
-import About from "@/components/home/About";
 import Footer from "@/components/footer";
+import Releases from "@/components/home/releases";
+import Spotlight from "@/components/home/spotlight";
+import About from "@/components/home/about";
 
 
 
@@ -13,9 +13,9 @@ const LangingPage = () => {
     <main className="overflow-x-hidden antialiased text-neutral-800">
       <Navbar/>
       <Hero/>
-      <Services/>
-      <Portfolio/>
-      <About/> 
+      <Releases/>
+      <Spotlight/>
+      <About/>
       <Footer/> 
     </main>
   );
