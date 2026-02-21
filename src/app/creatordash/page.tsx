@@ -1,6 +1,6 @@
 
-import Navbar from "@/src/components/navbar";
-import CreatorDashboard from "@/src/components/creatordashboard";
+import Navbar from "@/components/navbar";
+import CreatorDashboard from "@/components/creatordashboard";
 
 
 const page = () => {

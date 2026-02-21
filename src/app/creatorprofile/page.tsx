@@ -1,6 +1,6 @@
 
-import Navbar from "@/src/components/navbar";
-import CreatorProfile from "../../components/creatorprofile";
+import Navbar from "@/components/navbar";
+import CreatorProfile from "../../../components/creatorprofile";
 
 
 const page = () => {

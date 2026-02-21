@@ -1,6 +1,6 @@
-import Navbar from "@/src/components/navbar";
-import CategoriesPage from "@/src/components/categories";
-import Footer from "@/src/components/footer";
+import Navbar from "@/components/navbar";
+import CategoriesPage from "@/components/categories";
+import Footer from "@/components/footer";
 
 
 const App = () => {

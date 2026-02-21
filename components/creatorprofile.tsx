@@ -5,7 +5,7 @@ import {
   RiFlashlightFill, RiTwitterXFill, RiInstagramLine,
   RiGlobalLine, RiVerifiedBadgeFill, RiMailSendLine
 } from "react-icons/ri";
-import { PORTFOLIO_PROJECTS } from "../constants";
+import { PORTFOLIO_PROJECTS } from "../data/constants";
 
 const CreatorProfile = () => {
   const [isFollowing, setIsFollowing] = useState(false);

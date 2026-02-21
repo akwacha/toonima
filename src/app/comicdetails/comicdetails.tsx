@@ -4,7 +4,7 @@ import {
   RiPlayFill, RiAddLine, RiShareForwardLine, 
   RiStarFill, RiTimeLine, RiBookOpenLine 
 } from "react-icons/ri";
-import { PORTFOLIO_PROJECTS } from "../../constants";
+import { PORTFOLIO_PROJECTS } from "../../../data/constants";
 
 const ComicDetail = () => {
   const [isFollowing, setIsFollowing] = useState(false);

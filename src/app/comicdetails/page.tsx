@@ -1,5 +1,5 @@
 
-import Navbar from "@/src/components/navbar";
+import Navbar from "@/components/navbar";
 import ComicDetail from "./comicdetails";
 
 

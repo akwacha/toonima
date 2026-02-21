@@ -1,10 +1,10 @@
 
-import Navbar from "../../components/navbar";
-import Hero from "../../components/Hero";
-import Services from "../../components/Services";
-import Portfolio from "../../components/Portfolio";
-import About from "../../components/About";
-import Footer from "@/src/components/footer";
+import Navbar from "@/components/navbar";
+import Hero from "@/components/home/Hero";
+import Services from "@/components/home/Services";
+import Portfolio from "@/components/home/Portfolio";
+import About from "@/components/home/About";
+import Footer from "@/components/footer";
 
 
 

@@ -4,7 +4,7 @@ import {
   RiHeartFill, RiHistoryLine, RiDeleteBin6Line, 
   RiPlayMiniFill, RiMore2Fill 
 } from "react-icons/ri";
-import { PORTFOLIO_PROJECTS } from "../constants";
+import { PORTFOLIO_PROJECTS } from "../data/constants";
 
 const LibraryScreen = () => {
   const [activeTab, setActiveTab] = useState("favorites");

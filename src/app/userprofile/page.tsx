@@ -1,4 +1,4 @@
-import Navbar from "@/src/components/navbar";
+import Navbar from "@/components/navbar";
 import ProfileScreen from "./userprofile";
 
 

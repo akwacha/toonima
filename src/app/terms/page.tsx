@@ -1,7 +1,7 @@
 
-import Footer from "@/src/components/footer";
-import Navbar from "@/src/components/navbar";
-import TermsOfService from "@/src/components/privacyterms";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+import TermsOfService from "@/components/privacyterms";
 
 
 

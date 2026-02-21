@@ -8,7 +8,7 @@ import {
   RiShieldFill, RiFlashlightFill 
 } from "react-icons/ri";
 
-import { PORTFOLIO_PROJECTS } from "../constants";
+import { PORTFOLIO_PROJECTS } from "../data/constants";
 
 const ComicReader = () => {
   const [showControls, setShowControls] = useState(true);

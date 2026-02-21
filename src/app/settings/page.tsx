@@ -1,7 +1,7 @@
 
-import Navbar from "@/src/components/navbar";
+import Navbar from "@/components/navbar";
 // ✅ Correct for named export
-import SettingsScreen from "@/src/components/settings";
+import SettingsScreen from "@/components/settings";
 
 
 const page = () => {

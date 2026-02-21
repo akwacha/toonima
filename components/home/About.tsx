@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { PORTFOLIO_PROJECTS } from "../constants";
+import { PORTFOLIO_PROJECTS } from "../../data/constants";
 
 const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Completed"];
 

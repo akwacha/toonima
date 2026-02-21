@@ -1,7 +1,7 @@
 
-import Footer from "@/src/components/footer";
-import Navbar from "@/src/components/navbar";
-import SponsorPage from "@/src/components/sponsorcomic";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+import SponsorPage from "@/components/sponsorcomic";
 
 
 

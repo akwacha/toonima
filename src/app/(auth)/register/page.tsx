@@ -1,13 +1,10 @@
 
-import Navbar from "@/components/navbar";
-import ComicUploadForm from "@/components/upload";
-
+import LoginForm from "@/components/login";
 
 const page = () => {
   return (
     <main className="overflow-x-hidden antialiased text-neutral-800">
-      <Navbar/>
-      <ComicUploadForm/>
+      <LoginForm/>
     </main>
   );
 }
