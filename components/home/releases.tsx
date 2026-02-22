@@ -60,15 +60,17 @@ const Releases = () => {
 
               {/* Metadata */}
               <div className="space-y-0.5">
+                {/* 🏎️ FIX 1: Property 'category' fallback */}
                 <p className="text-[9px] text-[#F56476] font-black uppercase tracking-[0.15em]">
-                  {project.category || "General"}
+                  {(project as any).category || "General"}
                 </p>
                 <h3 className="text-[13px] font-black text-[#102321] leading-tight uppercase tracking-tight line-clamp-2 group-hover:text-[#F56476] transition-colors italic">
                   {project.name}
                 </h3>
                 <div className="flex items-center gap-1 pt-1">
                    <span className="text-[10px] font-black text-stone-400 uppercase tracking-widest">
-                     {project.views || "1.5M"} Views
+                     {/* 🏎️ FIX 2: Property 'views' fallback */}
+                     {(project as any).views || "1.5M"} Views
                    </span>
                 </div>
               </div>

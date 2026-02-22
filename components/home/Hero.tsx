@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react"
-import { HERO_CONTENT } from "../../data/constants"
+import { useEffect, useRef, useState } from "react";
+import { HERO_CONTENT } from "../../data/constants";
 
 const featured = [
   { id: 1, title: "Midnight City", img: "https://placehold.co/300x400" },
@@ -9,34 +9,36 @@ const featured = [
   { id: 3, title: "Golden Sands", img: "https://placehold.co/300x400" },
   { id: 4, title: "Silent Thunder", img: "https://placehold.co/300x400" },
   { id: 5, title: "Hidden Truth", img: "https://placehold.co/300x400" },
-]
+];
 
 const Hero = () => {
-  const scrollRef = useRef(null)
-  const [paused, setPaused] = useState(false)
+  // 🏎️ Fix 1: Explicitly tell TypeScript this is an HTMLDivElement
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [paused, setPaused] = useState(false);
 
-  const infiniteItems = [...featured, ...featured]
+  const infiniteItems = [...featured, ...featured];
 
   useEffect(() => {
-    const el = scrollRef.current
-    if (!el) return
+    const el = scrollRef.current;
+    if (!el) return;
 
-    let animationFrameId
-    const scrollSpeed = 1 
+    // 🏎️ Fix 2: Type the animation ID (it's a number in the browser)
+    let animationFrameId: number;
+    const scrollSpeed = 1;
 
     const scroll = () => {
       if (!paused) {
-        el.scrollLeft += scrollSpeed
+        el.scrollLeft += scrollSpeed;
         if (el.scrollLeft >= el.scrollWidth / 2) {
-          el.scrollLeft = 0
+          el.scrollLeft = 0;
         }
       }
-      animationFrameId = requestAnimationFrame(scroll)
-    }
+      animationFrameId = requestAnimationFrame(scroll);
+    };
 
-    animationFrameId = requestAnimationFrame(scroll)
-    return () => cancelAnimationFrame(animationFrameId)
-  }, [paused])
+    animationFrameId = requestAnimationFrame(scroll);
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [paused]);
 
   return (
     <section className="bg-[#edf7f6] border-b border-stone-200 overflow-hidden">
@@ -75,7 +77,7 @@ const Hero = () => {
             style={{ 
               scrollbarWidth: 'none', 
               msOverflowStyle: 'none' 
-            }}
+            } as React.CSSProperties} // Fix 3: Style type casting
           >
             <style jsx>{`
               .no-scrollbar::-webkit-scrollbar {
@@ -102,7 +104,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
