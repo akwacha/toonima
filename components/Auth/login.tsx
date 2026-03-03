@@ -6,11 +6,12 @@ const LoginForm = () => {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-8 bg-[#edf7f6]">
-      <div className="w-full max-w-md bg-white border border-stone-200 p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl shadow-[#102321]/5">
+    /* Changed min-h-screen to py-20 to allow footer visibility */
+    <section className="flex items-center justify-center px-2 py-20 bg-[#edf7f6]">
+      <div className="w-full max-w-md bg-white border border-stone-200 p-6 md:p-10 rounded-[2.5rem] shadow-2xl shadow-[#102321]/5">
         
         {/* --- Brand Header --- */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-8">
           <div className="inline-block bg-[#F56476] px-4 py-2 rounded-xl rotate-[-2deg] mb-6 shadow-lg shadow-[#F56476]/20">
             <h2 className="text-xl md:text-2xl font-black text-white leading-none tracking-tighter italic">
               TOONIMA
@@ -27,13 +28,13 @@ const LoginForm = () => {
         {/* --- Social Login --- */}
         <button 
           type="button"
-          className="w-full flex items-center justify-center gap-3 border border-stone-200 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-[#edf7f6] hover:border-[#F56476] transition-all mb-6 group active:scale-[0.98]"
+          className="w-full flex items-center justify-center gap-2 border border-stone-200 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-[#edf7f6] hover:border-[#F56476] transition-all mb-6 group active:scale-[0.98]"
         >
           <RiGoogleFill className="text-xl text-[#F56476] group-hover:scale-110 transition-transform" />
           Enter via Google Portal
         </button>
 
-        <div className="flex items-center gap-4 mb-8">
+        <div className="flex items-center gap-3 mb-6">
           <div className="h-[1px] bg-stone-100 flex-1"></div>
           <span className="text-[9px] font-black text-stone-300 uppercase tracking-[0.3em]">OR USE ANCIENT SCROLLS</span>
           <div className="h-[1px] bg-stone-100 flex-1"></div>
@@ -42,7 +43,7 @@ const LoginForm = () => {
         {/* --- Form --- */}
         <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
           {!isLogin && (
-            <div className="relative group">
+            <div className="relative group animate-in fade-in slide-in-from-top-2">
               <RiUserLine className="absolute left-4 top-1/2 -translate-y-1/2 text-stone-400 group-focus-within:text-[#F56476] transition-colors" />
               <input 
                 type="text" 
@@ -85,7 +86,7 @@ const LoginForm = () => {
         </form>
 
         {/* --- Toggle State --- */}
-        <div className="mt-10 text-center">
+        <div className="mt-8 text-center">
           <p className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">
             {isLogin ? "New to these lands?" : "Already part of the legend?"}
             <button 
