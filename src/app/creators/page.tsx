@@ -1,7 +1,7 @@
 
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/ui/navbar";
 import CreatorBrowser from "@/components/creatorbrowser"; 
-import Footer from "@/components/footer";
+import Footer from "@/components/ui/footer";
 
 
 

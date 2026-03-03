@@ -1,7 +1,7 @@
 
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/ui/navbar";
 import MerchStore from "@/components/merchstore";
-import Footer from "@/components/footer";
+import Footer from "@/components/ui/footer";
 
 
 

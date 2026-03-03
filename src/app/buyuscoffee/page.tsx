@@ -1,7 +1,7 @@
 
 import BuyCoffee from "@/components/buyuscoffee";
-import Footer from "@/components/footer";
-import Navbar from "@/components/navbar";
+import Footer from "@/components/ui/footer";
+import Navbar from "@/components/ui/navbar";
 
 
 

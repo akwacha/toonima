@@ -1,5 +1,5 @@
 
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/ui/navbar";
 import CreatorProfile from "../../../components/creatorprofile";
 
 

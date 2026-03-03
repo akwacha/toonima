@@ -1,4 +1,6 @@
-import { SERVICES_CONTENT } from "../../data/constants";
+'use client';
+import React from "react";
+import { RiArrowRightLine } from "react-icons/ri";
 
 const ARTISTS = [
   { name: "Elena Rossi", specialty: "Muralist", description: "Elena blends contemporary textures with classic renovation aesthetics.", image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=800", badge: "Spotlight" },
@@ -13,83 +15,61 @@ const ARTISTS = [
 
 const Spotlight = () => {
   return (
-    <section className="bg-[#edf7f6] text-[#102321]" id="services">
+    <section className="bg-[#edf7f6] text-[#102321]" id="spotlight">
       <div className="max-w-7xl mx-auto py-24 px-4">
         
-        {/* --- 🎨 ARTISTS SPOTLIGHT --- */}
         <div className="text-center mb-16">
           <h4 className="text-[#F56476] font-black tracking-[0.2em] uppercase text-[10px] mb-3">
             The Creative Collective
           </h4>
-          <h2 className="text-4xl lg:text-5xl font-black uppercase tracking-tighter italic italic">
+          <h2 className="text-4xl lg:text-5xl font-black uppercase tracking-tighter italic">
             Artists & Visionaries
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-32">
-          {ARTISTS.map((artist, index) => (
-            <div 
-              key={index} 
-              className="group relative bg-white border border-stone-200 p-6 rounded-[2rem] flex flex-col items-center text-center transition-all duration-500 hover:shadow-2xl hover:shadow-[#102321]/5 hover:-translate-y-2"
-            >
-              <div className="relative mb-6">
-                <div className="absolute inset-0 bg-[#F56476] rounded-full scale-0 group-hover:scale-105 transition-transform duration-500 -z-10 opacity-20" />
-                <img
-                  src={artist.image}
-                  alt={artist.name}
-                  className="w-24 h-24 lg:w-32 lg:h-32 object-cover rounded-full border-4 border-[#edf7f6] shadow-xl grayscale-[50%] group-hover:grayscale-0 transition-all duration-500"
-                />
-                <div className={`absolute -top-1 -right-2 px-3 py-1 rounded-full text-[8px] font-black uppercase tracking-widest shadow-md text-white ${artist.badge === 'Upcomer' ? 'bg-[#102321]' : 'bg-[#F56476]'}`}>
-                  {artist.badge}
+        <div className="relative">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {ARTISTS.map((artist, index) => (
+              <div 
+                key={index} 
+                className="group relative bg-white border border-stone-200 p-6 rounded-[2rem] flex flex-col items-center text-center transition-all duration-500 hover:shadow-2xl hover:shadow-[#102321]/5 hover:-translate-y-2"
+              >
+                <div className="relative mb-6">
+                  <div className="absolute inset-0 bg-[#F56476] rounded-full scale-0 group-hover:scale-105 transition-transform duration-500 -z-10 opacity-20" />
+                  <img
+                    src={artist.image}
+                    alt={artist.name}
+                    className="w-24 h-24 lg:w-32 lg:h-32 object-cover rounded-full border-4 border-[#edf7f6] shadow-xl grayscale-[50%] group-hover:grayscale-0 transition-all duration-500"
+                  />
+                  <div className={`absolute -top-1 -right-2 px-3 py-1 rounded-full text-[8px] font-black uppercase tracking-widest shadow-md text-white ${artist.badge === 'Upcomer' ? 'bg-[#102321]' : 'bg-[#F56476]'}`}>
+                    {artist.badge}
+                  </div>
                 </div>
-              </div>
-              
-              <h3 className="text-lg font-black uppercase tracking-tight mb-1">{artist.name}</h3>
-              <p className="text-[10px] text-[#F56476] font-black uppercase tracking-[0.15em] mb-3">
-                {artist.specialty}
-              </p>
-              <p className="text-xs text-stone-500 leading-relaxed font-medium">
-                {artist.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <hr className="mb-24 border-stone-200" />
-
-        {/* --- 🏗️ RENOVATION SERVICES --- */}
-        <div className="text-center mb-20">
-          <h2 className="text-2xl lg:text-4xl font-black uppercase tracking-tighter italic">
-            Renovation Services
-          </h2>
-          <div className="w-20 h-1.5 bg-[#F56476] mx-auto mt-4 rounded-full" />
-        </div>
-
-        <div className="space-y-32">
-          {SERVICES_CONTENT.map((service, index) => (
-            <div key={index} className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
-              <div className={`lg:w-1/2 group relative ${index % 2 === 0 ? "" : "lg:order-2"}`}>
-                <div className="absolute -inset-4 bg-[#F56476]/5 rounded-[2.5rem] -rotate-2 group-hover:rotate-0 transition-transform duration-500" />
-                <img
-                  src={service.image.src}
-                  alt={service.title}
-                  className="relative w-full h-80 lg:h-[500px] object-cover rounded-[2rem] shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
-                />
-              </div>
-
-              <div className={`lg:w-1/2 space-y-6 ${index % 2 === 0 ? "lg:pl-8" : "lg:pr-8"}`}>
-                <h3 className="text-3xl lg:text-5xl font-black uppercase tracking-tighter leading-none">
-                  {service.title}
-                </h3>
-                <p className="text-lg lg:text-xl text-stone-600 leading-relaxed font-medium">
-                  {service.description}
+                
+                <h3 className="text-lg font-black uppercase tracking-tight mb-1">{artist.name}</h3>
+                <p className="text-[10px] text-[#F56476] font-black uppercase tracking-[0.15em] mb-3">
+                  {artist.specialty}
                 </p>
-                <button className="px-8 py-4 bg-[#102321] text-white text-xs font-black uppercase tracking-[0.2em] rounded-xl hover:bg-[#F56476] transition-all shadow-lg active:scale-95">
-                  Explore Project
-                </button>
+                <p className="text-xs text-stone-500 leading-relaxed font-medium">
+                  {artist.description}
+                </p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* FIX: Increased z-index and relative positioning to ensure mobile clickability */}
+          <div className="flex justify-end mt-12 relative z-30">
+            <a 
+              href="/creators" 
+              className="group flex items-center gap-4 text-[11px] font-black uppercase tracking-[0.2em] text-stone-400 hover:text-[#F56476] transition-all duration-300 py-4"
+            >
+              <span className="group-hover:tracking-[0.3em] transition-all">Expand the Odyssey</span>
+              <div className="flex items-center">
+                <div className="w-8 h-[1px] bg-stone-300 group-hover:bg-[#F56476] group-hover:w-12 transition-all duration-500" />
+                <RiArrowRightLine className="ml-[-4px] opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all" />
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </section>
